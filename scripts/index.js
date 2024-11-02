@@ -17,11 +17,13 @@ response
       // ADDING AN EVENT LISTENER
       button.addEventListener("click", () => {
         //console.log("clicked!");
-        
+        // STORING DATA OF WONDER IN LOCAL STORAGE FOR FUTURE MANIPULATION
+        localStorage.setItem("selectedWonder", JSON.stringify(wonder));
+        window.location.href = "/pages/wonder.html";
       });
 
       // APPENDING CARD TO THE CONTAINER
-      cardContainer.appendChild(button);
+      wondersContainer.appendChild(button);
     });
   })
   .catch((error) => {

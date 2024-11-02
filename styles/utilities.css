@@ -9,3 +9,16 @@
 .wrap {
   flex-wrap: wrap;
 }
+
+.space-between {
+  justify-content: space-between;
+}
+
+.container {
+  width: 100%;
+  padding: 35px;
+}
+
+.primary-color {
+  color: rgb(136, 156, 255);
+}
