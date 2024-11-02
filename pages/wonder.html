@@ -1,9 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="/styles/base.css" />
+    <link rel="stylesheet" href="/styles/wonder.css" />
+    <link rel="stylesheet" href="/styles/utilities.css" />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>The World Wonder</title>
   </head>
-  <body></body>
+  <body>
+    <nav>
+      <p id="wonder-name"></p>
+    </nav>
+
+    <section class="container flex column" id="wonder-container">
+      <div id="summary"></div>
+
+      <div class="flex info-container">
+        <div class="images" id="images"></div>
+
+        <div class="info" id="info"></div>
+      </div>
+
+      <div class="flex">
+        <button id="back-img" class="info-item">
+          <img src="../assets/icons/left-arrow.png" />
+        </button>
+        <button id="next-img" class="info-item">
+          <img src="../assets/icons/right-arrow.png" />
+        </button>
+      </div>
+    </section>
+
+    <script src="/scripts/dom.js"></script>
+    <script src="/scripts/wonder.js"></script>
+  </body>
 </html>
