@@ -15,3 +15,11 @@ nav > p {
   font-size: 35px;
   font-weight: bold;
 }
+
+button {
+  width: 100%;
+}
+
+button:hover {
+  background-color: rgba(147, 164, 251, 0.236);
+}

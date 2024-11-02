@@ -14,6 +14,17 @@ console.log(imgs);
 
 let index = 0;
 
+backImg.addEventListener("click", () => {
+  if (index > 0) {
+    index--;
+    updateIMG();
+  } else {
+    index = imgs.length - 1;
+    updateIMG();
+    console.log("no more images");
+  }
+});
+
 nextImg.addEventListener("click", () => {
   if (index < imgs.length - 1) {
     index++;
@@ -58,4 +69,5 @@ info.innerHTML = `
     <p class="info-item"> <span class="primary-color"> <strong>Categories    :</strong></span> ${wonder.categories.join(
       ", "
     )}</p>
+
 `;

@@ -1,3 +1,12 @@
+button {
+  border-radius: 15px;
+  border-color: rgb(136, 156, 255);
+}
+
+.container {
+  padding: 35px 35px 0px 35px;
+}
+
 .container p {
   font-size: 24px;
 }
@@ -12,10 +21,12 @@
 
 .info {
   width: 50%;
+  height: 100%;
 }
 
 .images {
   width: 50%;
+  height: 100%;
 }
 
 .images > img {
@@ -23,11 +34,29 @@
   height: 100%;
 }
 
-.container button {
-  width: 100%;
+.buttons {
+  padding: 0px 35px 35px 35px;
+  height: 100%;
+}
+.buttons button {
+  height: 100%;
 }
 
 .info-item {
   padding: 20px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+@media (max-width: 800px) {
+  .info-container {
+    flex-direction: column;
+  }
+
+  .info {
+    width: 100%;
+  }
+
+  .images {
+    width: 100%;
+  }
 }
