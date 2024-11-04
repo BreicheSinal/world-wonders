@@ -1,19 +1,17 @@
 const wonder = JSON.parse(localStorage.getItem("selectedWonder"));
-console.log(wonder);
 
 // DISPLAYING NAME(UPPERCASE) IN THE NAV
 wonderName.innerHTML = `${wonder.name}`;
 wonderName.style.textTransform = "uppercase";
 
-// GETTING IMAGES FROM
+// GETTING IMAGES
 const imgs = [];
 for (let x = 0; x < wonder.links.images.length; x++)
   imgs.push(wonder.links.images[x]);
 
-console.log(imgs);
-
 let index = 0;
 
+// BACK IMG BUTTON FUNCTIONALITY
 backImg.addEventListener("click", () => {
   if (index > 0) {
     index--;
@@ -21,10 +19,10 @@ backImg.addEventListener("click", () => {
   } else {
     index = imgs.length - 1;
     updateIMG();
-    console.log("no more images");
   }
 });
 
+// NEXT IMG BUTTON FUNCTIONALITY
 nextImg.addEventListener("click", () => {
   if (index < imgs.length - 1) {
     index++;
@@ -32,17 +30,15 @@ nextImg.addEventListener("click", () => {
   } else {
     index = 0;
     updateIMG();
-    console.log("no more images");
   }
 });
 
+// UPDATING IMG BASED ON INDEX
 function updateIMG() {
   images.innerHTML = `
 <img src="${wonder.links.images[index]}" alt="${wonder.name}" class="info-item" />
 `;
 }
-
-//console.log(index);
 
 // DISPLAYING INFO
 summary.innerHTML = `

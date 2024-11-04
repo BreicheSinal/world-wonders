@@ -1,7 +1,53 @@
+nav p {
+  font-size: 50px;
+}
+
 .button {
+  align-self: flex-start;
+  padding: 10px;
+  border: none;
+  border-radius: 15px;
+  width: 150px;
+  box-shadow: 0 4px 8px 0 rgba(56, 126, 255, 0.2),
+    0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  font-size: 15px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  gap: 25px;
   padding: 10px;
   border-radius: 15px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 20px;
-  font-size: 25px;
+  height: 30vw;
+}
+
+.card-img {
+  width: 50%;
+  height: 100%;
+}
+
+.card-txt {
+  font-size: 40px;
+  text-transform: uppercase;
+}
+
+.gap {
+  gap: 20px;
+}
+
+@media (max-width: 700px) {
+  .card-txt {
+    font-size: 20px;
+    text-transform: uppercase;
+  }
+}
+
+@media (min-width: 701px) and (max-width: 1000px) {
+  .card-txt {
+    font-size: 30px;
+    text-transform: uppercase;
+  }
 }

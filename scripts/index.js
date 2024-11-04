@@ -7,23 +7,28 @@ response
 
     data.forEach((wonder) => {
       // CREATING A NEW BUTTON FOR EACH WONDER
-      const button = document.createElement("button");
-      button.className = "button"; // Add a class for styling
+      const div = document.createElement("div");
 
-      // ADDING NAME OF WONDER
-      button.innerHTML = `
-            <p>${wonder.name}</p>
+      div.className = "card";
+
+      div.innerHTML = `
+        <img src="${wonder.links.images[0]}" alt="${wonder.name}" class="card-img" />
+        <div class="flex column gap">
+          <p class="card-txt primary-color">${wonder.name}</p>
+          <button class="button"> MORE INFO </button>
+        </div>
         `;
-      // ADDING AN EVENT LISTENER
+
+      // ADD EVENT LISTENER TO BUTTON
+      const button = div.querySelector("button");
       button.addEventListener("click", () => {
-        //console.log("clicked!");
-        // STORING DATA OF WONDER IN LOCAL STORAGE FOR FUTURE MANIPULATION
+        // Storing data of wonder in local storage for future manipulation
         localStorage.setItem("selectedWonder", JSON.stringify(wonder));
         window.location.href = "/pages/wonder.html";
       });
 
       // APPENDING CARD TO THE CONTAINER
-      wondersContainer.appendChild(button);
+      wondersContainer.appendChild(div);
     });
   })
   .catch((error) => {
